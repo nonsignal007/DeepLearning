@@ -1,0 +1,106 @@
+Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-images-idx3-ubyte.gz
+Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-images-idx3-ubyte.gz to data/FashionMNIST/raw/train-images-idx3-ubyte.gz
+
+76.0%
+
+100.0%
+Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-labels-idx1-ubyte.gz
+Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-labels-idx1-ubyte.gz to data/FashionMNIST/raw/train-labels-idx1-ubyte.gz
+Extracting data/FashionMNIST/raw/train-labels-idx1-ubyte.gz to data/FashionMNIST/raw
+Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-images-idx3-ubyte.gz
+100.0%
+0.7%
+
+100.0%
+Extracting data/FashionMNIST/raw/t10k-images-idx3-ubyte.gz to data/FashionMNIST/raw
+Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-labels-idx1-ubyte.gz
+Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-labels-idx1-ubyte.gz to data/FashionMNIST/raw/t10k-labels-idx1-ubyte.gz
+100.0%
+Extracting data/FashionMNIST/raw/t10k-labels-idx1-ubyte.gz to data/FashionMNIST/raw
+Shape of X [N, C, H, W]:  torch.Size([64, 1, 28, 28])
+Shape of y:  torch.Size([64]) torch.int64
+Using mps device
+NeuralNetwork(
+  (flatten): Flatten(start_dim=1, end_dim=-1)
+  (linear_relu_stack): Sequential(
+    (0): Linear(in_features=784, out_features=512, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=512, out_features=512, bias=True)
+    (3): ReLU()
+    (4): Linear(in_features=512, out_features=10, bias=True)
+  )
+)
+Epoch 1
+-------------------------------
+loss: 2.313315  [    0/60000]
+loss: 2.290679  [ 6400/60000]
+loss: 2.271378  [12800/60000]
+loss: 2.258636  [19200/60000]
+loss: 2.257337  [25600/60000]
+loss: 2.220120  [32000/60000]
+loss: 2.229926  [38400/60000]
+loss: 2.207305  [44800/60000]
+loss: 2.196726  [51200/60000]
+loss: 2.153841  [57600/60000]
+Test Error:
+ Accuracy: 46.6%, Avg loss: 2.153156
+Epoch 2
+-------------------------------
+loss: 2.170215  [    0/60000]
+loss: 2.152564  [ 6400/60000]
+loss: 2.097513  [12800/60000]
+loss: 2.107301  [19200/60000]
+loss: 2.068806  [25600/60000]
+loss: 2.001867  [32000/60000]
+loss: 2.033483  [38400/60000]
+loss: 1.964798  [44800/60000]
+loss: 1.953556  [51200/60000]
+loss: 1.879471  [57600/60000]
+Test Error:
+ Accuracy: 59.6%, Avg loss: 1.880580
+Epoch 3
+-------------------------------
+loss: 1.912244  [    0/60000]
+loss: 1.880886  [ 6400/60000]
+loss: 1.765570  [12800/60000]
+loss: 1.805381  [19200/60000]
+loss: 1.705310  [25600/60000]
+loss: 1.643183  [32000/60000]
+loss: 1.672596  [38400/60000]
+loss: 1.580644  [44800/60000]
+loss: 1.590017  [51200/60000]
+loss: 1.488109  [57600/60000]
+Test Error:
+ Accuracy: 61.9%, Avg loss: 1.505439
+Epoch 4
+-------------------------------
+loss: 1.566433  [    0/60000]
+loss: 1.535694  [ 6400/60000]
+loss: 1.385767  [12800/60000]
+loss: 1.460129  [19200/60000]
+loss: 1.351001  [25600/60000]
+loss: 1.333915  [32000/60000]
+loss: 1.361968  [38400/60000]
+loss: 1.288676  [44800/60000]
+loss: 1.313820  [51200/60000]
+loss: 1.220060  [57600/60000]
+Test Error:
+ Accuracy: 63.4%, Avg loss: 1.240404
+Epoch 5
+-------------------------------
+loss: 1.313152  [    0/60000]
+loss: 1.298685  [ 6400/60000]
+loss: 1.133358  [12800/60000]
+loss: 1.240850  [19200/60000]
+loss: 1.126459  [25600/60000]
+loss: 1.138902  [32000/60000]
+loss: 1.176632  [38400/60000]
+loss: 1.112287  [44800/60000]
+/var/folders/y7/gqrr888s3gj219stgv80ty2h0000gn/T/ipykernel_43625/279834549.py:118: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load("model.pth"))
+loss: 1.143590  [51200/60000]
+loss: 1.066536  [57600/60000]
+Test Error:
+ Accuracy: 64.5%, Avg loss: 1.079175
+Done!
+Saved PyTorch Model State to model.pth

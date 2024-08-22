@@ -1,0 +1,1426 @@
+2024-08-22 13:57:24,206 INFO    StreamThr :52627 [internal.py:wandb_internal():85] W&B internal server running at pid: 52627, started at: 2024-08-22 13:57:24.205491
+2024-08-22 13:57:24,207 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: status
+2024-08-22 13:57:24,208 INFO    WriterThread:52627 [datastore.py:open_for_write():87] open: /Users/minsu/Desktop/archive/DeepLearning/wandb-tutorial/wandb/run-20240822_135724-wbdp1edk/run-wbdp1edk.wandb
+2024-08-22 13:57:24,208 DEBUG   SenderThread:52627 [sender.py:send():391] send: header
+2024-08-22 13:57:24,236 DEBUG   SenderThread:52627 [sender.py:send():391] send: run
+2024-08-22 13:57:24,731 INFO    SenderThread:52627 [dir_watcher.py:__init__():211] watching files in: /Users/minsu/Desktop/archive/DeepLearning/wandb-tutorial/wandb/run-20240822_135724-wbdp1edk/files
+2024-08-22 13:57:24,731 INFO    SenderThread:52627 [sender.py:_start_run_threads():1200] run started: wbdp1edk with start time 1724302644.205903
+2024-08-22 13:57:24,736 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: check_version
+2024-08-22 13:57:24,737 DEBUG   SenderThread:52627 [sender.py:send_request():418] send_request: check_version
+2024-08-22 13:57:24,780 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: run_start
+2024-08-22 13:57:24,785 DEBUG   HandlerThread:52627 [system_info.py:__init__():26] System info init
+2024-08-22 13:57:24,786 DEBUG   HandlerThread:52627 [system_info.py:__init__():41] System info init done
+2024-08-22 13:57:24,786 INFO    HandlerThread:52627 [system_monitor.py:start():194] Starting system monitor
+2024-08-22 13:57:24,786 INFO    SystemMonitor:52627 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-08-22 13:57:24,786 INFO    HandlerThread:52627 [system_monitor.py:probe():214] Collecting system info
+2024-08-22 13:57:24,787 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started cpu monitoring
+2024-08-22 13:57:24,787 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started disk monitoring
+2024-08-22 13:57:24,788 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started gpuapple monitoring
+2024-08-22 13:57:24,791 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started memory monitoring
+2024-08-22 13:57:24,792 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started network monitoring
+2024-08-22 13:57:25,470 ERROR   HandlerThread:52627 [gpu_apple.py:probe():176] GPU stats error: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 164, in probe
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 421, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 13:57:25,472 DEBUG   HandlerThread:52627 [system_info.py:probe():152] Probing system
+2024-08-22 13:57:25,477 DEBUG   HandlerThread:52627 [system_info.py:_probe_git():137] Probing git
+2024-08-22 13:57:25,506 DEBUG   HandlerThread:52627 [system_info.py:_probe_git():145] Probing git done
+2024-08-22 13:57:25,506 DEBUG   HandlerThread:52627 [system_info.py:probe():200] Probing system done
+2024-08-22 13:57:25,506 DEBUG   HandlerThread:52627 [system_monitor.py:probe():223] {'os': 'macOS-15.0-arm64-arm-64bit', 'python': '3.10.12', 'heartbeatAt': '2024-08-22T04:57:25.472826', 'startedAt': '2024-08-22T04:57:24.201417', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '<python with no main file>', 'codePathLocal': None, 'git': {'remote': 'git@github.com:nonsignal007/DeepLearning.git', 'commit': '87821c1715f335434d6cce90852869a0a641a7d5'}, 'email': 'nonsignal007@gmail.com', 'root': '/Users/minsu/Desktop/archive/DeepLearning', 'host': 'Minsuui-MacBookAir.local', 'username': 'minsu', 'executable': '/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/bin/python', 'cpu_count': 8, 'cpu_count_logical': 8, 'cpu_freq': {'current': 3504, 'min': 600, 'max': 3504}, 'cpu_freq_per_core': [{'current': 3504, 'min': 600, 'max': 3504}], 'disk': {'/': {'total': 228.27386474609375, 'used': 10.646476745605469}}, 'gpuapple': {'type': 'arm', 'vendor': 'Apple'}, 'memory': {'total': 24.0}}
+2024-08-22 13:57:25,506 INFO    HandlerThread:52627 [system_monitor.py:probe():224] Finished collecting system info
+2024-08-22 13:57:25,506 INFO    HandlerThread:52627 [system_monitor.py:probe():227] Publishing system info
+2024-08-22 13:57:25,507 INFO    HandlerThread:52627 [system_monitor.py:probe():229] Finished publishing system info
+2024-08-22 13:57:25,509 DEBUG   SenderThread:52627 [sender.py:send():391] send: files
+2024-08-22 13:57:25,509 INFO    SenderThread:52627 [sender.py:_save_file():1466] saving file wandb-metadata.json with policy now
+2024-08-22 13:57:25,566 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: python_packages
+2024-08-22 13:57:25,567 DEBUG   SenderThread:52627 [sender.py:send_request():418] send_request: python_packages
+2024-08-22 13:57:25,567 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-22 13:57:25,567 DEBUG   SenderThread:52627 [sender.py:send_request():418] send_request: stop_status
+2024-08-22 13:57:25,568 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:57:25,570 ERROR   gpuapple  :52627 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 421, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 13:57:25,733 INFO    Thread-12 :52627 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/minsu/Desktop/archive/DeepLearning/wandb-tutorial/wandb/run-20240822_135724-wbdp1edk/files/wandb-metadata.json
+2024-08-22 13:57:25,733 INFO    Thread-12 :52627 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/minsu/Desktop/archive/DeepLearning/wandb-tutorial/wandb/run-20240822_135724-wbdp1edk/files/requirements.txt
+2024-08-22 13:57:25,811 DEBUG   SenderThread:52627 [sender.py:send():391] send: telemetry
+2024-08-22 13:57:25,811 DEBUG   SenderThread:52627 [sender.py:send():391] send: config
+2024-08-22 13:57:26,268 INFO    wandb-upload_0:52627 [upload_job.py:push():130] Uploaded file /var/folders/y7/gqrr888s3gj219stgv80ty2h0000gn/T/tmpb5j9rr3pwandb/65wmo9r9-wandb-metadata.json
+2024-08-22 13:57:26,572 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:57:26,738 INFO    Thread-12 :52627 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/minsu/Desktop/archive/DeepLearning/wandb-tutorial/wandb/run-20240822_135724-wbdp1edk/files/output.log
+2024-08-22 13:57:27,577 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:57:27,680 ERROR   gpuapple  :52627 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 421, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 13:57:28,579 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:57:28,745 INFO    Thread-12 :52627 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/minsu/Desktop/archive/DeepLearning/wandb-tutorial/wandb/run-20240822_135724-wbdp1edk/files/output.log
+2024-08-22 13:57:29,660 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:57:29,842 ERROR   gpuapple  :52627 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 421, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 13:57:29,883 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: pause
+2024-08-22 13:57:29,883 INFO    HandlerThread:52627 [handler.py:handle_request_pause():724] stopping system metrics thread
+2024-08-22 13:57:29,883 INFO    HandlerThread:52627 [system_monitor.py:finish():203] Stopping system monitor
+2024-08-22 13:57:29,883 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined cpu monitor
+2024-08-22 13:57:29,883 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-08-22 13:57:29,884 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined disk monitor
+2024-08-22 13:57:29,884 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-08-22 13:57:29,884 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined gpuapple monitor
+2024-08-22 13:57:29,884 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-08-22 13:57:29,884 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined memory monitor
+2024-08-22 13:57:29,884 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined network monitor
+2024-08-22 13:57:29,884 DEBUG   SenderThread:52627 [sender.py:send():391] send: telemetry
+2024-08-22 13:57:29,884 DEBUG   SenderThread:52627 [sender.py:send():391] send: stats
+2024-08-22 13:57:29,885 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 13:57:30,661 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:57:31,666 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:57:32,668 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:57:33,673 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:57:34,674 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:57:35,577 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 13:57:35,679 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:57:36,682 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:57:37,682 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:57:38,684 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:57:39,686 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:57:40,572 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-22 13:57:40,573 DEBUG   SenderThread:52627 [sender.py:send_request():418] send_request: stop_status
+2024-08-22 13:57:40,690 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:57:40,934 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 13:57:41,695 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:57:42,700 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:57:43,703 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:57:44,005 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: resume
+2024-08-22 13:57:44,005 INFO    HandlerThread:52627 [handler.py:handle_request_resume():715] starting system metrics thread
+2024-08-22 13:57:44,005 INFO    HandlerThread:52627 [system_monitor.py:start():194] Starting system monitor
+2024-08-22 13:57:44,005 INFO    SystemMonitor:52627 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-08-22 13:57:44,006 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started cpu monitoring
+2024-08-22 13:57:44,006 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started disk monitoring
+2024-08-22 13:57:44,008 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started gpuapple monitoring
+2024-08-22 13:57:44,011 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started memory monitoring
+2024-08-22 13:57:44,011 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: pause
+2024-08-22 13:57:44,012 INFO    HandlerThread:52627 [handler.py:handle_request_pause():724] stopping system metrics thread
+2024-08-22 13:57:44,012 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started network monitoring
+2024-08-22 13:57:44,012 INFO    HandlerThread:52627 [system_monitor.py:finish():203] Stopping system monitor
+2024-08-22 13:57:44,013 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-08-22 13:57:44,013 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-08-22 13:57:44,013 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-08-22 13:57:44,013 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined cpu monitor
+2024-08-22 13:57:44,013 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined disk monitor
+2024-08-22 13:57:44,106 ERROR   gpuapple  :52627 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 421, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 13:57:44,106 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined gpuapple monitor
+2024-08-22 13:57:44,106 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined memory monitor
+2024-08-22 13:57:44,106 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined network monitor
+2024-08-22 13:57:44,107 DEBUG   SenderThread:52627 [sender.py:send():391] send: stats
+2024-08-22 13:57:44,533 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: resume
+2024-08-22 13:57:44,533 INFO    HandlerThread:52627 [handler.py:handle_request_resume():715] starting system metrics thread
+2024-08-22 13:57:44,533 INFO    HandlerThread:52627 [system_monitor.py:start():194] Starting system monitor
+2024-08-22 13:57:44,533 INFO    SystemMonitor:52627 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-08-22 13:57:44,534 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started cpu monitoring
+2024-08-22 13:57:44,535 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started disk monitoring
+2024-08-22 13:57:44,536 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started gpuapple monitoring
+2024-08-22 13:57:44,538 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: pause
+2024-08-22 13:57:44,538 INFO    HandlerThread:52627 [handler.py:handle_request_pause():724] stopping system metrics thread
+2024-08-22 13:57:44,538 INFO    HandlerThread:52627 [system_monitor.py:finish():203] Stopping system monitor
+2024-08-22 13:57:44,538 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined cpu monitor
+2024-08-22 13:57:44,538 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined disk monitor
+2024-08-22 13:57:44,539 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started memory monitoring
+2024-08-22 13:57:44,539 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-08-22 13:57:44,539 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-08-22 13:57:44,539 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-08-22 13:57:44,628 ERROR   gpuapple  :52627 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 421, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 13:57:44,628 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined gpuapple monitor
+2024-08-22 13:57:44,628 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined memory monitor
+2024-08-22 13:57:44,629 DEBUG   SenderThread:52627 [sender.py:send():391] send: stats
+2024-08-22 13:57:44,708 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:57:44,826 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: resume
+2024-08-22 13:57:44,826 INFO    HandlerThread:52627 [handler.py:handle_request_resume():715] starting system metrics thread
+2024-08-22 13:57:44,826 INFO    HandlerThread:52627 [system_monitor.py:start():194] Starting system monitor
+2024-08-22 13:57:44,826 INFO    SystemMonitor:52627 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-08-22 13:57:44,827 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started cpu monitoring
+2024-08-22 13:57:44,827 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started disk monitoring
+2024-08-22 13:57:44,827 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started gpuapple monitoring
+2024-08-22 13:57:44,830 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started memory monitoring
+2024-08-22 13:57:44,831 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: pause
+2024-08-22 13:57:44,831 INFO    HandlerThread:52627 [handler.py:handle_request_pause():724] stopping system metrics thread
+2024-08-22 13:57:44,831 INFO    HandlerThread:52627 [system_monitor.py:finish():203] Stopping system monitor
+2024-08-22 13:57:44,831 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started network monitoring
+2024-08-22 13:57:44,831 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-08-22 13:57:44,831 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-08-22 13:57:44,831 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-08-22 13:57:44,832 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined cpu monitor
+2024-08-22 13:57:44,832 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined disk monitor
+2024-08-22 13:57:44,925 ERROR   gpuapple  :52627 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 421, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 13:57:44,925 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined gpuapple monitor
+2024-08-22 13:57:44,925 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined memory monitor
+2024-08-22 13:57:44,925 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined network monitor
+2024-08-22 13:57:44,926 DEBUG   SenderThread:52627 [sender.py:send():391] send: stats
+2024-08-22 13:57:44,927 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: resume
+2024-08-22 13:57:44,927 INFO    HandlerThread:52627 [handler.py:handle_request_resume():715] starting system metrics thread
+2024-08-22 13:57:44,927 INFO    HandlerThread:52627 [system_monitor.py:start():194] Starting system monitor
+2024-08-22 13:57:44,927 INFO    SystemMonitor:52627 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-08-22 13:57:44,927 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started cpu monitoring
+2024-08-22 13:57:44,927 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started disk monitoring
+2024-08-22 13:57:44,928 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started gpuapple monitoring
+2024-08-22 13:57:44,930 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started memory monitoring
+2024-08-22 13:57:44,931 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: pause
+2024-08-22 13:57:44,931 INFO    HandlerThread:52627 [handler.py:handle_request_pause():724] stopping system metrics thread
+2024-08-22 13:57:44,931 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started network monitoring
+2024-08-22 13:57:44,931 INFO    HandlerThread:52627 [system_monitor.py:finish():203] Stopping system monitor
+2024-08-22 13:57:44,931 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-08-22 13:57:44,931 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-08-22 13:57:44,931 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-08-22 13:57:44,932 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined cpu monitor
+2024-08-22 13:57:44,932 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined disk monitor
+2024-08-22 13:57:45,017 ERROR   gpuapple  :52627 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 421, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 13:57:45,018 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined gpuapple monitor
+2024-08-22 13:57:45,018 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined memory monitor
+2024-08-22 13:57:45,018 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined network monitor
+2024-08-22 13:57:45,018 DEBUG   SenderThread:52627 [sender.py:send():391] send: stats
+2024-08-22 13:57:45,099 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: resume
+2024-08-22 13:57:45,099 INFO    HandlerThread:52627 [handler.py:handle_request_resume():715] starting system metrics thread
+2024-08-22 13:57:45,099 INFO    HandlerThread:52627 [system_monitor.py:start():194] Starting system monitor
+2024-08-22 13:57:45,099 INFO    SystemMonitor:52627 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-08-22 13:57:45,099 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started cpu monitoring
+2024-08-22 13:57:45,099 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started disk monitoring
+2024-08-22 13:57:45,100 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started gpuapple monitoring
+2024-08-22 13:57:45,102 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started memory monitoring
+2024-08-22 13:57:45,103 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: pause
+2024-08-22 13:57:45,103 INFO    HandlerThread:52627 [handler.py:handle_request_pause():724] stopping system metrics thread
+2024-08-22 13:57:45,103 INFO    HandlerThread:52627 [system_monitor.py:finish():203] Stopping system monitor
+2024-08-22 13:57:45,103 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started network monitoring
+2024-08-22 13:57:45,103 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-08-22 13:57:45,103 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-08-22 13:57:45,103 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-08-22 13:57:45,104 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined cpu monitor
+2024-08-22 13:57:45,104 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined disk monitor
+2024-08-22 13:57:45,189 ERROR   gpuapple  :52627 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 421, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 13:57:45,189 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined gpuapple monitor
+2024-08-22 13:57:45,189 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined memory monitor
+2024-08-22 13:57:45,189 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined network monitor
+2024-08-22 13:57:45,190 DEBUG   SenderThread:52627 [sender.py:send():391] send: stats
+2024-08-22 13:57:45,285 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: resume
+2024-08-22 13:57:45,285 INFO    HandlerThread:52627 [handler.py:handle_request_resume():715] starting system metrics thread
+2024-08-22 13:57:45,285 INFO    HandlerThread:52627 [system_monitor.py:start():194] Starting system monitor
+2024-08-22 13:57:45,285 INFO    SystemMonitor:52627 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-08-22 13:57:45,285 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started cpu monitoring
+2024-08-22 13:57:45,286 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started disk monitoring
+2024-08-22 13:57:45,287 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started gpuapple monitoring
+2024-08-22 13:57:45,289 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: pause
+2024-08-22 13:57:45,289 INFO    HandlerThread:52627 [handler.py:handle_request_pause():724] stopping system metrics thread
+2024-08-22 13:57:45,289 INFO    HandlerThread:52627 [system_monitor.py:finish():203] Stopping system monitor
+2024-08-22 13:57:45,289 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined cpu monitor
+2024-08-22 13:57:45,290 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started memory monitoring
+2024-08-22 13:57:45,290 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-08-22 13:57:45,290 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-08-22 13:57:45,290 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-08-22 13:57:45,290 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined disk monitor
+2024-08-22 13:57:45,382 ERROR   gpuapple  :52627 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 421, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 13:57:45,382 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined gpuapple monitor
+2024-08-22 13:57:45,382 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined memory monitor
+2024-08-22 13:57:45,382 DEBUG   SenderThread:52627 [sender.py:send():391] send: stats
+2024-08-22 13:57:45,574 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: resume
+2024-08-22 13:57:45,574 INFO    HandlerThread:52627 [handler.py:handle_request_resume():715] starting system metrics thread
+2024-08-22 13:57:45,574 INFO    HandlerThread:52627 [system_monitor.py:start():194] Starting system monitor
+2024-08-22 13:57:45,574 INFO    SystemMonitor:52627 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-08-22 13:57:45,574 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started cpu monitoring
+2024-08-22 13:57:45,574 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started disk monitoring
+2024-08-22 13:57:45,575 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started gpuapple monitoring
+2024-08-22 13:57:45,577 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started memory monitoring
+2024-08-22 13:57:45,578 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: pause
+2024-08-22 13:57:45,578 INFO    HandlerThread:52627 [handler.py:handle_request_pause():724] stopping system metrics thread
+2024-08-22 13:57:45,578 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started network monitoring
+2024-08-22 13:57:45,578 INFO    HandlerThread:52627 [system_monitor.py:finish():203] Stopping system monitor
+2024-08-22 13:57:45,578 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-08-22 13:57:45,579 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-08-22 13:57:45,579 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-08-22 13:57:45,579 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined cpu monitor
+2024-08-22 13:57:45,579 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined disk monitor
+2024-08-22 13:57:45,670 ERROR   gpuapple  :52627 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 421, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 13:57:45,670 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined gpuapple monitor
+2024-08-22 13:57:45,670 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined memory monitor
+2024-08-22 13:57:45,670 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined network monitor
+2024-08-22 13:57:45,671 DEBUG   SenderThread:52627 [sender.py:send():391] send: stats
+2024-08-22 13:57:45,704 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: resume
+2024-08-22 13:57:45,704 INFO    HandlerThread:52627 [handler.py:handle_request_resume():715] starting system metrics thread
+2024-08-22 13:57:45,704 INFO    HandlerThread:52627 [system_monitor.py:start():194] Starting system monitor
+2024-08-22 13:57:45,704 INFO    SystemMonitor:52627 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-08-22 13:57:45,704 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started cpu monitoring
+2024-08-22 13:57:45,704 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started disk monitoring
+2024-08-22 13:57:45,706 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started gpuapple monitoring
+2024-08-22 13:57:45,708 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started memory monitoring
+2024-08-22 13:57:45,708 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: pause
+2024-08-22 13:57:45,708 INFO    HandlerThread:52627 [handler.py:handle_request_pause():724] stopping system metrics thread
+2024-08-22 13:57:45,708 INFO    HandlerThread:52627 [system_monitor.py:finish():203] Stopping system monitor
+2024-08-22 13:57:45,708 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started network monitoring
+2024-08-22 13:57:45,708 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-08-22 13:57:45,708 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-08-22 13:57:45,708 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-08-22 13:57:45,709 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined cpu monitor
+2024-08-22 13:57:45,709 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined disk monitor
+2024-08-22 13:57:45,792 ERROR   gpuapple  :52627 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 421, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 13:57:45,792 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined gpuapple monitor
+2024-08-22 13:57:45,792 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined memory monitor
+2024-08-22 13:57:45,792 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined network monitor
+2024-08-22 13:57:45,793 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:57:45,793 DEBUG   SenderThread:52627 [sender.py:send():391] send: stats
+2024-08-22 13:57:46,294 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: resume
+2024-08-22 13:57:46,294 INFO    HandlerThread:52627 [handler.py:handle_request_resume():715] starting system metrics thread
+2024-08-22 13:57:46,294 INFO    HandlerThread:52627 [system_monitor.py:start():194] Starting system monitor
+2024-08-22 13:57:46,294 INFO    SystemMonitor:52627 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-08-22 13:57:46,295 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started cpu monitoring
+2024-08-22 13:57:46,296 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started disk monitoring
+2024-08-22 13:57:46,296 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started gpuapple monitoring
+2024-08-22 13:57:46,297 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started memory monitoring
+2024-08-22 13:57:46,299 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: pause
+2024-08-22 13:57:46,302 INFO    HandlerThread:52627 [handler.py:handle_request_pause():724] stopping system metrics thread
+2024-08-22 13:57:46,302 INFO    HandlerThread:52627 [system_monitor.py:finish():203] Stopping system monitor
+2024-08-22 13:57:46,302 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started network monitoring
+2024-08-22 13:57:46,302 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-08-22 13:57:46,302 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-08-22 13:57:46,302 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-08-22 13:57:46,303 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined cpu monitor
+2024-08-22 13:57:46,304 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined disk monitor
+2024-08-22 13:57:46,446 ERROR   gpuapple  :52627 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 421, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 13:57:46,446 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined gpuapple monitor
+2024-08-22 13:57:46,446 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined memory monitor
+2024-08-22 13:57:46,446 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined network monitor
+2024-08-22 13:57:46,446 DEBUG   SenderThread:52627 [sender.py:send():391] send: stats
+2024-08-22 13:57:46,447 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 13:57:46,714 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:57:47,294 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: resume
+2024-08-22 13:57:47,294 INFO    HandlerThread:52627 [handler.py:handle_request_resume():715] starting system metrics thread
+2024-08-22 13:57:47,294 INFO    HandlerThread:52627 [system_monitor.py:start():194] Starting system monitor
+2024-08-22 13:57:47,295 INFO    SystemMonitor:52627 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-08-22 13:57:47,295 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started cpu monitoring
+2024-08-22 13:57:47,295 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started disk monitoring
+2024-08-22 13:57:47,295 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started gpuapple monitoring
+2024-08-22 13:57:47,296 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started memory monitoring
+2024-08-22 13:57:47,299 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: pause
+2024-08-22 13:57:47,299 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started network monitoring
+2024-08-22 13:57:47,299 INFO    HandlerThread:52627 [handler.py:handle_request_pause():724] stopping system metrics thread
+2024-08-22 13:57:47,299 INFO    HandlerThread:52627 [system_monitor.py:finish():203] Stopping system monitor
+2024-08-22 13:57:47,299 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-08-22 13:57:47,299 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-08-22 13:57:47,299 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-08-22 13:57:47,300 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined cpu monitor
+2024-08-22 13:57:47,300 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined disk monitor
+2024-08-22 13:57:47,398 ERROR   gpuapple  :52627 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 421, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 13:57:47,399 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined gpuapple monitor
+2024-08-22 13:57:47,399 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined memory monitor
+2024-08-22 13:57:47,399 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined network monitor
+2024-08-22 13:57:47,399 DEBUG   SenderThread:52627 [sender.py:send():391] send: stats
+2024-08-22 13:57:47,716 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:57:48,717 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:57:49,723 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:57:50,653 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: resume
+2024-08-22 13:57:50,653 INFO    HandlerThread:52627 [handler.py:handle_request_resume():715] starting system metrics thread
+2024-08-22 13:57:50,654 INFO    HandlerThread:52627 [system_monitor.py:start():194] Starting system monitor
+2024-08-22 13:57:50,654 INFO    SystemMonitor:52627 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-08-22 13:57:50,654 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started cpu monitoring
+2024-08-22 13:57:50,656 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started disk monitoring
+2024-08-22 13:57:50,658 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started gpuapple monitoring
+2024-08-22 13:57:50,659 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: pause
+2024-08-22 13:57:50,660 INFO    HandlerThread:52627 [handler.py:handle_request_pause():724] stopping system metrics thread
+2024-08-22 13:57:50,660 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started memory monitoring
+2024-08-22 13:57:50,660 INFO    HandlerThread:52627 [system_monitor.py:finish():203] Stopping system monitor
+2024-08-22 13:57:50,661 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started network monitoring
+2024-08-22 13:57:50,661 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-08-22 13:57:50,662 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined cpu monitor
+2024-08-22 13:57:50,662 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-08-22 13:57:50,662 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined disk monitor
+2024-08-22 13:57:50,662 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-08-22 13:57:50,780 ERROR   gpuapple  :52627 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 421, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 13:57:50,780 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined gpuapple monitor
+2024-08-22 13:57:50,780 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined memory monitor
+2024-08-22 13:57:50,780 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined network monitor
+2024-08-22 13:57:50,780 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:57:50,780 DEBUG   SenderThread:52627 [sender.py:send():391] send: stats
+2024-08-22 13:57:51,157 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: resume
+2024-08-22 13:57:51,157 INFO    HandlerThread:52627 [handler.py:handle_request_resume():715] starting system metrics thread
+2024-08-22 13:57:51,157 INFO    HandlerThread:52627 [system_monitor.py:start():194] Starting system monitor
+2024-08-22 13:57:51,157 INFO    SystemMonitor:52627 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-08-22 13:57:51,158 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started cpu monitoring
+2024-08-22 13:57:51,158 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started disk monitoring
+2024-08-22 13:57:51,161 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started gpuapple monitoring
+2024-08-22 13:57:51,162 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: pause
+2024-08-22 13:57:51,162 INFO    HandlerThread:52627 [handler.py:handle_request_pause():724] stopping system metrics thread
+2024-08-22 13:57:51,162 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started memory monitoring
+2024-08-22 13:57:51,163 INFO    HandlerThread:52627 [system_monitor.py:finish():203] Stopping system monitor
+2024-08-22 13:57:51,164 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started network monitoring
+2024-08-22 13:57:51,164 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined cpu monitor
+2024-08-22 13:57:51,164 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-08-22 13:57:51,164 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined disk monitor
+2024-08-22 13:57:51,164 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-08-22 13:57:51,164 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-08-22 13:57:51,260 ERROR   gpuapple  :52627 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 421, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 13:57:51,260 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined gpuapple monitor
+2024-08-22 13:57:51,260 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined memory monitor
+2024-08-22 13:57:51,260 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined network monitor
+2024-08-22 13:57:51,261 DEBUG   SenderThread:52627 [sender.py:send():391] send: stats
+2024-08-22 13:57:51,302 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: resume
+2024-08-22 13:57:51,302 INFO    HandlerThread:52627 [handler.py:handle_request_resume():715] starting system metrics thread
+2024-08-22 13:57:51,302 INFO    HandlerThread:52627 [system_monitor.py:start():194] Starting system monitor
+2024-08-22 13:57:51,302 INFO    SystemMonitor:52627 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-08-22 13:57:51,302 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started cpu monitoring
+2024-08-22 13:57:51,302 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started disk monitoring
+2024-08-22 13:57:51,302 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started gpuapple monitoring
+2024-08-22 13:57:51,305 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started memory monitoring
+2024-08-22 13:57:51,306 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: pause
+2024-08-22 13:57:51,306 INFO    HandlerThread:52627 [handler.py:handle_request_pause():724] stopping system metrics thread
+2024-08-22 13:57:51,306 INFO    HandlerThread:52627 [system_monitor.py:finish():203] Stopping system monitor
+2024-08-22 13:57:51,306 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started network monitoring
+2024-08-22 13:57:51,306 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-08-22 13:57:51,306 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-08-22 13:57:51,306 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-08-22 13:57:51,307 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined cpu monitor
+2024-08-22 13:57:51,307 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined disk monitor
+2024-08-22 13:57:51,399 ERROR   gpuapple  :52627 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 421, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 13:57:51,400 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined gpuapple monitor
+2024-08-22 13:57:51,400 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined memory monitor
+2024-08-22 13:57:51,400 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined network monitor
+2024-08-22 13:57:51,400 DEBUG   SenderThread:52627 [sender.py:send():391] send: stats
+2024-08-22 13:57:51,414 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: resume
+2024-08-22 13:57:51,414 INFO    HandlerThread:52627 [handler.py:handle_request_resume():715] starting system metrics thread
+2024-08-22 13:57:51,414 INFO    HandlerThread:52627 [system_monitor.py:start():194] Starting system monitor
+2024-08-22 13:57:51,415 INFO    SystemMonitor:52627 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-08-22 13:57:51,415 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started cpu monitoring
+2024-08-22 13:57:51,415 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started disk monitoring
+2024-08-22 13:57:51,417 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started gpuapple monitoring
+2024-08-22 13:57:51,418 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started memory monitoring
+2024-08-22 13:57:51,418 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: pause
+2024-08-22 13:57:51,419 INFO    HandlerThread:52627 [handler.py:handle_request_pause():724] stopping system metrics thread
+2024-08-22 13:57:51,419 INFO    HandlerThread:52627 [system_monitor.py:finish():203] Stopping system monitor
+2024-08-22 13:57:51,419 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started network monitoring
+2024-08-22 13:57:51,419 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined cpu monitor
+2024-08-22 13:57:51,419 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-08-22 13:57:51,419 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined disk monitor
+2024-08-22 13:57:51,419 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-08-22 13:57:51,419 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-08-22 13:57:51,513 ERROR   gpuapple  :52627 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 421, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 13:57:51,514 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined gpuapple monitor
+2024-08-22 13:57:51,514 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined memory monitor
+2024-08-22 13:57:51,514 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined network monitor
+2024-08-22 13:57:51,514 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: resume
+2024-08-22 13:57:51,514 INFO    HandlerThread:52627 [handler.py:handle_request_resume():715] starting system metrics thread
+2024-08-22 13:57:51,514 INFO    HandlerThread:52627 [system_monitor.py:start():194] Starting system monitor
+2024-08-22 13:57:51,514 INFO    SystemMonitor:52627 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-08-22 13:57:51,514 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started cpu monitoring
+2024-08-22 13:57:51,515 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started disk monitoring
+2024-08-22 13:57:51,515 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started gpuapple monitoring
+2024-08-22 13:57:51,515 DEBUG   SenderThread:52627 [sender.py:send():391] send: stats
+2024-08-22 13:57:51,515 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started memory monitoring
+2024-08-22 13:57:51,516 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 13:57:51,519 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: pause
+2024-08-22 13:57:51,519 INFO    HandlerThread:52627 [handler.py:handle_request_pause():724] stopping system metrics thread
+2024-08-22 13:57:51,519 INFO    HandlerThread:52627 [system_monitor.py:finish():203] Stopping system monitor
+2024-08-22 13:57:51,520 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined cpu monitor
+2024-08-22 13:57:51,520 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started network monitoring
+2024-08-22 13:57:51,520 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined disk monitor
+2024-08-22 13:57:51,520 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-08-22 13:57:51,520 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-08-22 13:57:51,520 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-08-22 13:57:51,613 ERROR   gpuapple  :52627 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 421, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 13:57:51,613 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined gpuapple monitor
+2024-08-22 13:57:51,613 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined memory monitor
+2024-08-22 13:57:51,614 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined network monitor
+2024-08-22 13:57:51,614 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: resume
+2024-08-22 13:57:51,614 INFO    HandlerThread:52627 [handler.py:handle_request_resume():715] starting system metrics thread
+2024-08-22 13:57:51,614 INFO    HandlerThread:52627 [system_monitor.py:start():194] Starting system monitor
+2024-08-22 13:57:51,614 INFO    SystemMonitor:52627 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-08-22 13:57:51,614 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: pause
+2024-08-22 13:57:51,614 DEBUG   SenderThread:52627 [sender.py:send():391] send: stats
+2024-08-22 13:57:51,614 INFO    HandlerThread:52627 [handler.py:handle_request_pause():724] stopping system metrics thread
+2024-08-22 13:57:51,614 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started cpu monitoring
+2024-08-22 13:57:51,614 INFO    HandlerThread:52627 [system_monitor.py:finish():203] Stopping system monitor
+2024-08-22 13:57:51,614 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started disk monitoring
+2024-08-22 13:57:51,614 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined cpu monitor
+2024-08-22 13:57:51,614 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-08-22 13:57:51,615 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined disk monitor
+2024-08-22 13:57:51,615 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-08-22 13:57:51,615 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-08-22 13:57:51,615 DEBUG   SenderThread:52627 [sender.py:send():391] send: stats
+2024-08-22 13:57:51,725 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:57:52,727 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:57:53,732 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:57:53,906 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: resume
+2024-08-22 13:57:53,906 INFO    HandlerThread:52627 [handler.py:handle_request_resume():715] starting system metrics thread
+2024-08-22 13:57:53,906 INFO    HandlerThread:52627 [system_monitor.py:start():194] Starting system monitor
+2024-08-22 13:57:53,906 INFO    SystemMonitor:52627 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-08-22 13:57:53,906 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started cpu monitoring
+2024-08-22 13:57:53,906 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started disk monitoring
+2024-08-22 13:57:53,907 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started gpuapple monitoring
+2024-08-22 13:57:53,909 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started memory monitoring
+2024-08-22 13:57:53,910 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started network monitoring
+2024-08-22 13:57:53,910 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: pause
+2024-08-22 13:57:53,910 INFO    HandlerThread:52627 [handler.py:handle_request_pause():724] stopping system metrics thread
+2024-08-22 13:57:53,910 INFO    HandlerThread:52627 [system_monitor.py:finish():203] Stopping system monitor
+2024-08-22 13:57:53,911 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined cpu monitor
+2024-08-22 13:57:53,911 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-08-22 13:57:53,911 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined disk monitor
+2024-08-22 13:57:53,911 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-08-22 13:57:53,911 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-08-22 13:57:54,022 ERROR   gpuapple  :52627 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 421, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 13:57:54,023 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined gpuapple monitor
+2024-08-22 13:57:54,023 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined memory monitor
+2024-08-22 13:57:54,023 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined network monitor
+2024-08-22 13:57:54,023 DEBUG   SenderThread:52627 [sender.py:send():391] send: stats
+2024-08-22 13:57:54,737 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:57:55,577 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-22 13:57:55,577 DEBUG   SenderThread:52627 [sender.py:send_request():418] send_request: stop_status
+2024-08-22 13:57:55,740 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:57:56,537 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: resume
+2024-08-22 13:57:56,537 INFO    HandlerThread:52627 [handler.py:handle_request_resume():715] starting system metrics thread
+2024-08-22 13:57:56,537 INFO    HandlerThread:52627 [system_monitor.py:start():194] Starting system monitor
+2024-08-22 13:57:56,537 INFO    SystemMonitor:52627 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-08-22 13:57:56,538 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started cpu monitoring
+2024-08-22 13:57:56,538 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started disk monitoring
+2024-08-22 13:57:56,540 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started gpuapple monitoring
+2024-08-22 13:57:56,547 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: pause
+2024-08-22 13:57:56,547 INFO    HandlerThread:52627 [handler.py:handle_request_pause():724] stopping system metrics thread
+2024-08-22 13:57:56,547 INFO    HandlerThread:52627 [system_monitor.py:finish():203] Stopping system monitor
+2024-08-22 13:57:56,547 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started memory monitoring
+2024-08-22 13:57:56,547 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-08-22 13:57:56,547 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-08-22 13:57:56,547 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-08-22 13:57:56,548 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined cpu monitor
+2024-08-22 13:57:56,548 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined disk monitor
+2024-08-22 13:57:56,653 ERROR   gpuapple  :52627 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 421, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 13:57:56,654 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined gpuapple monitor
+2024-08-22 13:57:56,654 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined memory monitor
+2024-08-22 13:57:56,654 DEBUG   SenderThread:52627 [sender.py:send():391] send: stats
+2024-08-22 13:57:56,656 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 13:57:56,744 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:57:57,750 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:57:57,862 INFO    Thread-12 :52627 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/minsu/Desktop/archive/DeepLearning/wandb-tutorial/wandb/run-20240822_135724-wbdp1edk/files/config.yaml
+2024-08-22 13:57:58,755 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:57:59,761 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:00,765 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:01,771 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:02,605 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 13:58:02,776 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:03,777 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:04,778 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:05,783 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:06,788 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:07,611 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 13:58:07,792 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:08,797 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:09,801 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:10,581 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-22 13:58:10,582 DEBUG   SenderThread:52627 [sender.py:send_request():418] send_request: stop_status
+2024-08-22 13:58:10,807 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:11,515 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: resume
+2024-08-22 13:58:11,515 INFO    HandlerThread:52627 [handler.py:handle_request_resume():715] starting system metrics thread
+2024-08-22 13:58:11,516 INFO    HandlerThread:52627 [system_monitor.py:start():194] Starting system monitor
+2024-08-22 13:58:11,516 INFO    SystemMonitor:52627 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-08-22 13:58:11,519 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started cpu monitoring
+2024-08-22 13:58:11,520 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started disk monitoring
+2024-08-22 13:58:11,523 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started gpuapple monitoring
+2024-08-22 13:58:11,524 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: pause
+2024-08-22 13:58:11,524 INFO    HandlerThread:52627 [handler.py:handle_request_pause():724] stopping system metrics thread
+2024-08-22 13:58:11,524 INFO    HandlerThread:52627 [system_monitor.py:finish():203] Stopping system monitor
+2024-08-22 13:58:11,524 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined cpu monitor
+2024-08-22 13:58:11,524 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started memory monitoring
+2024-08-22 13:58:11,524 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-08-22 13:58:11,524 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-08-22 13:58:11,524 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-08-22 13:58:11,525 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined disk monitor
+2024-08-22 13:58:11,663 ERROR   gpuapple  :52627 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 421, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 13:58:11,663 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined gpuapple monitor
+2024-08-22 13:58:11,663 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined memory monitor
+2024-08-22 13:58:11,663 DEBUG   SenderThread:52627 [sender.py:send():391] send: stats
+2024-08-22 13:58:11,810 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:12,669 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 13:58:12,814 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:13,657 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: resume
+2024-08-22 13:58:13,657 INFO    HandlerThread:52627 [handler.py:handle_request_resume():715] starting system metrics thread
+2024-08-22 13:58:13,657 INFO    HandlerThread:52627 [system_monitor.py:start():194] Starting system monitor
+2024-08-22 13:58:13,657 INFO    SystemMonitor:52627 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-08-22 13:58:13,658 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started cpu monitoring
+2024-08-22 13:58:13,658 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started disk monitoring
+2024-08-22 13:58:13,666 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started gpuapple monitoring
+2024-08-22 13:58:13,667 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: pause
+2024-08-22 13:58:13,667 INFO    HandlerThread:52627 [handler.py:handle_request_pause():724] stopping system metrics thread
+2024-08-22 13:58:13,667 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started memory monitoring
+2024-08-22 13:58:13,667 INFO    HandlerThread:52627 [system_monitor.py:finish():203] Stopping system monitor
+2024-08-22 13:58:13,667 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined cpu monitor
+2024-08-22 13:58:13,667 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started network monitoring
+2024-08-22 13:58:13,668 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined disk monitor
+2024-08-22 13:58:13,668 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-08-22 13:58:13,668 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-08-22 13:58:13,668 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-08-22 13:58:13,759 ERROR   gpuapple  :52627 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 421, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 13:58:13,760 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined gpuapple monitor
+2024-08-22 13:58:13,760 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined memory monitor
+2024-08-22 13:58:13,760 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined network monitor
+2024-08-22 13:58:13,760 DEBUG   SenderThread:52627 [sender.py:send():391] send: stats
+2024-08-22 13:58:13,816 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:14,821 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:15,826 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:16,831 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:17,837 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:18,626 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 13:58:18,842 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:19,847 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:20,853 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:21,858 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:22,861 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:22,948 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: resume
+2024-08-22 13:58:22,948 INFO    HandlerThread:52627 [handler.py:handle_request_resume():715] starting system metrics thread
+2024-08-22 13:58:22,948 INFO    HandlerThread:52627 [system_monitor.py:start():194] Starting system monitor
+2024-08-22 13:58:22,948 INFO    SystemMonitor:52627 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-08-22 13:58:22,949 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started cpu monitoring
+2024-08-22 13:58:22,949 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started disk monitoring
+2024-08-22 13:58:22,949 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started gpuapple monitoring
+2024-08-22 13:58:22,953 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started memory monitoring
+2024-08-22 13:58:22,954 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: pause
+2024-08-22 13:58:22,955 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started network monitoring
+2024-08-22 13:58:22,955 INFO    HandlerThread:52627 [handler.py:handle_request_pause():724] stopping system metrics thread
+2024-08-22 13:58:22,955 INFO    HandlerThread:52627 [system_monitor.py:finish():203] Stopping system monitor
+2024-08-22 13:58:22,956 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-08-22 13:58:22,956 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined cpu monitor
+2024-08-22 13:58:22,956 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-08-22 13:58:22,956 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined disk monitor
+2024-08-22 13:58:22,956 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-08-22 13:58:23,052 ERROR   gpuapple  :52627 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 421, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 13:58:23,053 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined gpuapple monitor
+2024-08-22 13:58:23,053 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined memory monitor
+2024-08-22 13:58:23,053 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined network monitor
+2024-08-22 13:58:23,053 DEBUG   SenderThread:52627 [sender.py:send():391] send: stats
+2024-08-22 13:58:23,865 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:24,059 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 13:58:24,870 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:25,194 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: resume
+2024-08-22 13:58:25,195 INFO    HandlerThread:52627 [handler.py:handle_request_resume():715] starting system metrics thread
+2024-08-22 13:58:25,195 INFO    HandlerThread:52627 [system_monitor.py:start():194] Starting system monitor
+2024-08-22 13:58:25,195 INFO    SystemMonitor:52627 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-08-22 13:58:25,195 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started cpu monitoring
+2024-08-22 13:58:25,196 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started disk monitoring
+2024-08-22 13:58:25,200 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started gpuapple monitoring
+2024-08-22 13:58:25,201 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started memory monitoring
+2024-08-22 13:58:25,201 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: pause
+2024-08-22 13:58:25,201 INFO    HandlerThread:52627 [handler.py:handle_request_pause():724] stopping system metrics thread
+2024-08-22 13:58:25,201 INFO    HandlerThread:52627 [system_monitor.py:finish():203] Stopping system monitor
+2024-08-22 13:58:25,202 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined cpu monitor
+2024-08-22 13:58:25,202 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined disk monitor
+2024-08-22 13:58:25,202 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started network monitoring
+2024-08-22 13:58:25,202 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-08-22 13:58:25,202 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-08-22 13:58:25,202 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-08-22 13:58:25,289 ERROR   gpuapple  :52627 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 421, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 13:58:25,289 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined gpuapple monitor
+2024-08-22 13:58:25,289 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined memory monitor
+2024-08-22 13:58:25,289 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined network monitor
+2024-08-22 13:58:25,289 DEBUG   SenderThread:52627 [sender.py:send():391] send: stats
+2024-08-22 13:58:25,587 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-22 13:58:25,588 DEBUG   SenderThread:52627 [sender.py:send_request():418] send_request: stop_status
+2024-08-22 13:58:25,875 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:26,878 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:27,811 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: resume
+2024-08-22 13:58:27,812 INFO    HandlerThread:52627 [handler.py:handle_request_resume():715] starting system metrics thread
+2024-08-22 13:58:27,812 INFO    HandlerThread:52627 [system_monitor.py:start():194] Starting system monitor
+2024-08-22 13:58:27,812 INFO    SystemMonitor:52627 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-08-22 13:58:27,813 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started cpu monitoring
+2024-08-22 13:58:27,815 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started disk monitoring
+2024-08-22 13:58:27,817 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started gpuapple monitoring
+2024-08-22 13:58:27,818 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started memory monitoring
+2024-08-22 13:58:27,819 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started network monitoring
+2024-08-22 13:58:27,819 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: pause
+2024-08-22 13:58:27,819 INFO    HandlerThread:52627 [handler.py:handle_request_pause():724] stopping system metrics thread
+2024-08-22 13:58:27,819 INFO    HandlerThread:52627 [system_monitor.py:finish():203] Stopping system monitor
+2024-08-22 13:58:27,819 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-08-22 13:58:27,819 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-08-22 13:58:27,819 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-08-22 13:58:27,819 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined cpu monitor
+2024-08-22 13:58:27,820 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined disk monitor
+2024-08-22 13:58:27,908 ERROR   gpuapple  :52627 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 421, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 13:58:27,909 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined gpuapple monitor
+2024-08-22 13:58:27,909 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined memory monitor
+2024-08-22 13:58:27,909 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined network monitor
+2024-08-22 13:58:27,909 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: resume
+2024-08-22 13:58:27,909 INFO    HandlerThread:52627 [handler.py:handle_request_resume():715] starting system metrics thread
+2024-08-22 13:58:27,909 DEBUG   SenderThread:52627 [sender.py:send():391] send: stats
+2024-08-22 13:58:27,909 INFO    HandlerThread:52627 [system_monitor.py:start():194] Starting system monitor
+2024-08-22 13:58:27,909 INFO    SystemMonitor:52627 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-08-22 13:58:27,909 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: pause
+2024-08-22 13:58:27,910 INFO    HandlerThread:52627 [handler.py:handle_request_pause():724] stopping system metrics thread
+2024-08-22 13:58:27,910 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started cpu monitoring
+2024-08-22 13:58:27,910 INFO    HandlerThread:52627 [system_monitor.py:finish():203] Stopping system monitor
+2024-08-22 13:58:27,910 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started disk monitoring
+2024-08-22 13:58:27,910 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined cpu monitor
+2024-08-22 13:58:27,910 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-08-22 13:58:27,910 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined disk monitor
+2024-08-22 13:58:27,910 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-08-22 13:58:27,910 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-08-22 13:58:27,911 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:27,911 DEBUG   SenderThread:52627 [sender.py:send():391] send: stats
+2024-08-22 13:58:28,713 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: resume
+2024-08-22 13:58:28,713 INFO    HandlerThread:52627 [handler.py:handle_request_resume():715] starting system metrics thread
+2024-08-22 13:58:28,713 INFO    HandlerThread:52627 [system_monitor.py:start():194] Starting system monitor
+2024-08-22 13:58:28,713 INFO    SystemMonitor:52627 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-08-22 13:58:28,714 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started cpu monitoring
+2024-08-22 13:58:28,715 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started disk monitoring
+2024-08-22 13:58:28,715 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started gpuapple monitoring
+2024-08-22 13:58:28,719 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: pause
+2024-08-22 13:58:28,720 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started memory monitoring
+2024-08-22 13:58:28,720 INFO    HandlerThread:52627 [handler.py:handle_request_pause():724] stopping system metrics thread
+2024-08-22 13:58:28,721 INFO    HandlerThread:52627 [system_monitor.py:finish():203] Stopping system monitor
+2024-08-22 13:58:28,722 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started network monitoring
+2024-08-22 13:58:28,722 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined cpu monitor
+2024-08-22 13:58:28,722 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-08-22 13:58:28,722 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined disk monitor
+2024-08-22 13:58:28,722 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-08-22 13:58:28,722 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-08-22 13:58:28,832 ERROR   gpuapple  :52627 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 421, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 13:58:28,832 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined gpuapple monitor
+2024-08-22 13:58:28,832 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined memory monitor
+2024-08-22 13:58:28,832 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined network monitor
+2024-08-22 13:58:28,833 DEBUG   SenderThread:52627 [sender.py:send():391] send: stats
+2024-08-22 13:58:28,887 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:29,041 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: resume
+2024-08-22 13:58:29,042 INFO    HandlerThread:52627 [handler.py:handle_request_resume():715] starting system metrics thread
+2024-08-22 13:58:29,042 INFO    HandlerThread:52627 [system_monitor.py:start():194] Starting system monitor
+2024-08-22 13:58:29,042 INFO    SystemMonitor:52627 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-08-22 13:58:29,043 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started cpu monitoring
+2024-08-22 13:58:29,044 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started disk monitoring
+2024-08-22 13:58:29,044 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started gpuapple monitoring
+2024-08-22 13:58:29,045 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: pause
+2024-08-22 13:58:29,045 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started memory monitoring
+2024-08-22 13:58:29,045 INFO    HandlerThread:52627 [handler.py:handle_request_pause():724] stopping system metrics thread
+2024-08-22 13:58:29,049 INFO    HandlerThread:52627 [system_monitor.py:finish():203] Stopping system monitor
+2024-08-22 13:58:29,049 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started network monitoring
+2024-08-22 13:58:29,050 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-08-22 13:58:29,050 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-08-22 13:58:29,050 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined cpu monitor
+2024-08-22 13:58:29,050 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-08-22 13:58:29,051 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined disk monitor
+2024-08-22 13:58:29,148 ERROR   gpuapple  :52627 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 421, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 13:58:29,149 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined gpuapple monitor
+2024-08-22 13:58:29,149 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined memory monitor
+2024-08-22 13:58:29,149 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined network monitor
+2024-08-22 13:58:29,149 DEBUG   SenderThread:52627 [sender.py:send():391] send: stats
+2024-08-22 13:58:29,150 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 13:58:29,892 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:30,899 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:31,902 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:32,908 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:33,909 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:34,637 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 13:58:34,915 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:35,920 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:36,921 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:37,925 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:38,931 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:39,643 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 13:58:39,934 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:40,588 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-22 13:58:40,588 DEBUG   SenderThread:52627 [sender.py:send_request():418] send_request: stop_status
+2024-08-22 13:58:40,939 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:41,944 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:42,945 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:43,950 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:44,809 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 13:58:44,953 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:45,958 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:46,964 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:47,968 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:48,973 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:49,978 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:50,637 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 13:58:50,983 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:51,989 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:52,993 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:53,994 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:54,996 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:55,594 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-22 13:58:55,594 DEBUG   SenderThread:52627 [sender.py:send_request():418] send_request: stop_status
+2024-08-22 13:58:55,851 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 13:58:55,996 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:57,001 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:58,005 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:58:59,010 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:00,013 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:01,014 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:01,648 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 13:59:02,017 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:03,016 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:04,020 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:05,022 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:06,026 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:06,455 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: resume
+2024-08-22 13:59:06,456 INFO    HandlerThread:52627 [handler.py:handle_request_resume():715] starting system metrics thread
+2024-08-22 13:59:06,456 INFO    HandlerThread:52627 [system_monitor.py:start():194] Starting system monitor
+2024-08-22 13:59:06,456 INFO    SystemMonitor:52627 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-08-22 13:59:06,456 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started cpu monitoring
+2024-08-22 13:59:06,456 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started disk monitoring
+2024-08-22 13:59:06,457 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started gpuapple monitoring
+2024-08-22 13:59:06,459 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started memory monitoring
+2024-08-22 13:59:06,460 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: pause
+2024-08-22 13:59:06,460 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started network monitoring
+2024-08-22 13:59:06,461 INFO    HandlerThread:52627 [handler.py:handle_request_pause():724] stopping system metrics thread
+2024-08-22 13:59:06,461 INFO    HandlerThread:52627 [system_monitor.py:finish():203] Stopping system monitor
+2024-08-22 13:59:06,461 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-08-22 13:59:06,461 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-08-22 13:59:06,461 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined cpu monitor
+2024-08-22 13:59:06,461 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-08-22 13:59:06,461 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined disk monitor
+2024-08-22 13:59:06,611 ERROR   gpuapple  :52627 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 421, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 13:59:06,611 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined gpuapple monitor
+2024-08-22 13:59:06,611 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined memory monitor
+2024-08-22 13:59:06,612 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined network monitor
+2024-08-22 13:59:06,612 DEBUG   SenderThread:52627 [sender.py:send():391] send: stats
+2024-08-22 13:59:07,028 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:07,617 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 13:59:08,035 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:09,039 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:10,044 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:10,597 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-22 13:59:10,597 DEBUG   SenderThread:52627 [sender.py:send_request():418] send_request: stop_status
+2024-08-22 13:59:11,050 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:12,053 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: resume
+2024-08-22 13:59:12,054 INFO    HandlerThread:52627 [handler.py:handle_request_resume():715] starting system metrics thread
+2024-08-22 13:59:12,054 INFO    HandlerThread:52627 [system_monitor.py:start():194] Starting system monitor
+2024-08-22 13:59:12,054 INFO    SystemMonitor:52627 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-08-22 13:59:12,054 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started cpu monitoring
+2024-08-22 13:59:12,054 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started disk monitoring
+2024-08-22 13:59:12,054 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started gpuapple monitoring
+2024-08-22 13:59:12,057 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:12,058 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: pause
+2024-08-22 13:59:12,058 INFO    HandlerThread:52627 [handler.py:handle_request_pause():724] stopping system metrics thread
+2024-08-22 13:59:12,058 INFO    HandlerThread:52627 [system_monitor.py:finish():203] Stopping system monitor
+2024-08-22 13:59:12,058 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started memory monitoring
+2024-08-22 13:59:12,058 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-08-22 13:59:12,058 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-08-22 13:59:12,058 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined cpu monitor
+2024-08-22 13:59:12,058 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-08-22 13:59:12,058 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined disk monitor
+2024-08-22 13:59:12,146 ERROR   gpuapple  :52627 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 421, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 13:59:12,146 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined gpuapple monitor
+2024-08-22 13:59:12,146 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined memory monitor
+2024-08-22 13:59:12,147 DEBUG   SenderThread:52627 [sender.py:send():391] send: stats
+2024-08-22 13:59:13,059 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:13,152 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 13:59:13,438 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: resume
+2024-08-22 13:59:13,438 INFO    HandlerThread:52627 [handler.py:handle_request_resume():715] starting system metrics thread
+2024-08-22 13:59:13,438 INFO    HandlerThread:52627 [system_monitor.py:start():194] Starting system monitor
+2024-08-22 13:59:13,438 INFO    SystemMonitor:52627 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-08-22 13:59:13,438 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started cpu monitoring
+2024-08-22 13:59:13,439 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started disk monitoring
+2024-08-22 13:59:13,439 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started gpuapple monitoring
+2024-08-22 13:59:13,442 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started memory monitoring
+2024-08-22 13:59:13,442 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started network monitoring
+2024-08-22 13:59:13,442 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: pause
+2024-08-22 13:59:13,442 INFO    HandlerThread:52627 [handler.py:handle_request_pause():724] stopping system metrics thread
+2024-08-22 13:59:13,442 INFO    HandlerThread:52627 [system_monitor.py:finish():203] Stopping system monitor
+2024-08-22 13:59:13,443 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined cpu monitor
+2024-08-22 13:59:13,443 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-08-22 13:59:13,443 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-08-22 13:59:13,443 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-08-22 13:59:13,443 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined disk monitor
+2024-08-22 13:59:13,527 ERROR   gpuapple  :52627 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 421, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 13:59:13,528 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined gpuapple monitor
+2024-08-22 13:59:13,528 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined memory monitor
+2024-08-22 13:59:13,528 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined network monitor
+2024-08-22 13:59:13,528 DEBUG   SenderThread:52627 [sender.py:send():391] send: stats
+2024-08-22 13:59:14,064 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:15,069 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:16,075 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:17,076 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:17,351 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: resume
+2024-08-22 13:59:17,351 INFO    HandlerThread:52627 [handler.py:handle_request_resume():715] starting system metrics thread
+2024-08-22 13:59:17,351 INFO    HandlerThread:52627 [system_monitor.py:start():194] Starting system monitor
+2024-08-22 13:59:17,351 INFO    SystemMonitor:52627 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-08-22 13:59:17,352 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started cpu monitoring
+2024-08-22 13:59:17,352 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started disk monitoring
+2024-08-22 13:59:17,352 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started gpuapple monitoring
+2024-08-22 13:59:17,355 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started memory monitoring
+2024-08-22 13:59:17,358 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: pause
+2024-08-22 13:59:17,360 INFO    HandlerThread:52627 [handler.py:handle_request_pause():724] stopping system metrics thread
+2024-08-22 13:59:17,360 INFO    HandlerThread:52627 [system_monitor.py:finish():203] Stopping system monitor
+2024-08-22 13:59:17,360 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started network monitoring
+2024-08-22 13:59:17,360 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-08-22 13:59:17,360 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-08-22 13:59:17,360 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined cpu monitor
+2024-08-22 13:59:17,360 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-08-22 13:59:17,361 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined disk monitor
+2024-08-22 13:59:17,460 ERROR   gpuapple  :52627 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 421, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 13:59:17,460 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined gpuapple monitor
+2024-08-22 13:59:17,460 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined memory monitor
+2024-08-22 13:59:17,460 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined network monitor
+2024-08-22 13:59:17,460 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: resume
+2024-08-22 13:59:17,460 INFO    HandlerThread:52627 [handler.py:handle_request_resume():715] starting system metrics thread
+2024-08-22 13:59:17,460 INFO    HandlerThread:52627 [system_monitor.py:start():194] Starting system monitor
+2024-08-22 13:59:17,460 INFO    SystemMonitor:52627 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-08-22 13:59:17,460 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: pause
+2024-08-22 13:59:17,461 INFO    HandlerThread:52627 [handler.py:handle_request_pause():724] stopping system metrics thread
+2024-08-22 13:59:17,461 INFO    HandlerThread:52627 [system_monitor.py:finish():203] Stopping system monitor
+2024-08-22 13:59:17,461 WARNING HandlerThread:52627 [interfaces.py:finish():205] Failed to finish cpu monitoring: cannot join thread before it is started
+2024-08-22 13:59:17,461 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started cpu monitoring
+2024-08-22 13:59:17,461 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-08-22 13:59:17,461 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-08-22 13:59:17,461 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-08-22 13:59:17,461 DEBUG   SenderThread:52627 [sender.py:send():391] send: stats
+2024-08-22 13:59:17,590 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: resume
+2024-08-22 13:59:17,591 INFO    HandlerThread:52627 [handler.py:handle_request_resume():715] starting system metrics thread
+2024-08-22 13:59:17,591 INFO    HandlerThread:52627 [system_monitor.py:start():194] Starting system monitor
+2024-08-22 13:59:17,591 INFO    SystemMonitor:52627 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-08-22 13:59:17,591 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started cpu monitoring
+2024-08-22 13:59:17,592 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started disk monitoring
+2024-08-22 13:59:17,595 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started gpuapple monitoring
+2024-08-22 13:59:17,597 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started memory monitoring
+2024-08-22 13:59:17,600 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started network monitoring
+2024-08-22 13:59:17,601 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: pause
+2024-08-22 13:59:17,601 INFO    HandlerThread:52627 [handler.py:handle_request_pause():724] stopping system metrics thread
+2024-08-22 13:59:17,601 INFO    HandlerThread:52627 [system_monitor.py:finish():203] Stopping system monitor
+2024-08-22 13:59:17,601 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-08-22 13:59:17,601 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-08-22 13:59:17,601 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-08-22 13:59:17,602 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined cpu monitor
+2024-08-22 13:59:17,602 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined disk monitor
+2024-08-22 13:59:17,697 ERROR   gpuapple  :52627 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 421, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 13:59:17,697 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined gpuapple monitor
+2024-08-22 13:59:17,697 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined memory monitor
+2024-08-22 13:59:17,697 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined network monitor
+2024-08-22 13:59:17,697 DEBUG   SenderThread:52627 [sender.py:send():391] send: stats
+2024-08-22 13:59:18,076 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:18,703 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 13:59:19,081 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:20,087 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:21,091 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:22,092 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:23,097 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:24,101 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:24,681 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 13:59:25,104 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:25,603 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-22 13:59:25,604 DEBUG   SenderThread:52627 [sender.py:send_request():418] send_request: stop_status
+2024-08-22 13:59:26,109 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:27,111 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:28,112 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:29,116 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:29,862 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 13:59:30,117 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:30,772 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: resume
+2024-08-22 13:59:30,772 INFO    HandlerThread:52627 [handler.py:handle_request_resume():715] starting system metrics thread
+2024-08-22 13:59:30,772 INFO    HandlerThread:52627 [system_monitor.py:start():194] Starting system monitor
+2024-08-22 13:59:30,773 INFO    SystemMonitor:52627 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-08-22 13:59:30,773 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started cpu monitoring
+2024-08-22 13:59:30,774 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started disk monitoring
+2024-08-22 13:59:30,778 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started gpuapple monitoring
+2024-08-22 13:59:30,779 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started memory monitoring
+2024-08-22 13:59:30,779 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: pause
+2024-08-22 13:59:30,779 INFO    HandlerThread:52627 [handler.py:handle_request_pause():724] stopping system metrics thread
+2024-08-22 13:59:30,779 INFO    HandlerThread:52627 [system_monitor.py:finish():203] Stopping system monitor
+2024-08-22 13:59:30,780 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started network monitoring
+2024-08-22 13:59:30,780 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined cpu monitor
+2024-08-22 13:59:30,780 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-08-22 13:59:30,780 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined disk monitor
+2024-08-22 13:59:30,780 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-08-22 13:59:30,780 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-08-22 13:59:30,878 ERROR   gpuapple  :52627 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 421, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 13:59:30,879 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined gpuapple monitor
+2024-08-22 13:59:30,879 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined memory monitor
+2024-08-22 13:59:30,879 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined network monitor
+2024-08-22 13:59:30,880 DEBUG   SenderThread:52627 [sender.py:send():391] send: stats
+2024-08-22 13:59:31,122 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:31,369 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: resume
+2024-08-22 13:59:31,369 INFO    HandlerThread:52627 [handler.py:handle_request_resume():715] starting system metrics thread
+2024-08-22 13:59:31,369 INFO    HandlerThread:52627 [system_monitor.py:start():194] Starting system monitor
+2024-08-22 13:59:31,370 INFO    SystemMonitor:52627 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-08-22 13:59:31,370 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started cpu monitoring
+2024-08-22 13:59:31,370 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started disk monitoring
+2024-08-22 13:59:31,373 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started gpuapple monitoring
+2024-08-22 13:59:31,374 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: pause
+2024-08-22 13:59:31,374 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started memory monitoring
+2024-08-22 13:59:31,374 INFO    HandlerThread:52627 [handler.py:handle_request_pause():724] stopping system metrics thread
+2024-08-22 13:59:31,374 INFO    HandlerThread:52627 [system_monitor.py:finish():203] Stopping system monitor
+2024-08-22 13:59:31,374 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started network monitoring
+2024-08-22 13:59:31,374 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-08-22 13:59:31,374 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-08-22 13:59:31,374 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-08-22 13:59:31,375 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined cpu monitor
+2024-08-22 13:59:31,375 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined disk monitor
+2024-08-22 13:59:31,466 ERROR   gpuapple  :52627 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 421, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 13:59:31,466 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined gpuapple monitor
+2024-08-22 13:59:31,466 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined memory monitor
+2024-08-22 13:59:31,466 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined network monitor
+2024-08-22 13:59:32,127 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:33,132 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:34,138 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:34,893 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 13:59:35,142 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:36,147 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:37,151 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:37,340 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: resume
+2024-08-22 13:59:37,340 INFO    HandlerThread:52627 [handler.py:handle_request_resume():715] starting system metrics thread
+2024-08-22 13:59:37,340 INFO    HandlerThread:52627 [system_monitor.py:start():194] Starting system monitor
+2024-08-22 13:59:37,341 INFO    SystemMonitor:52627 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-08-22 13:59:37,345 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started cpu monitoring
+2024-08-22 13:59:37,345 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started disk monitoring
+2024-08-22 13:59:37,348 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started gpuapple monitoring
+2024-08-22 13:59:37,355 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: pause
+2024-08-22 13:59:37,356 INFO    HandlerThread:52627 [handler.py:handle_request_pause():724] stopping system metrics thread
+2024-08-22 13:59:37,356 INFO    HandlerThread:52627 [system_monitor.py:finish():203] Stopping system monitor
+2024-08-22 13:59:37,358 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started memory monitoring
+2024-08-22 13:59:37,358 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined cpu monitor
+2024-08-22 13:59:37,358 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-08-22 13:59:37,358 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined disk monitor
+2024-08-22 13:59:37,358 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-08-22 13:59:37,359 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-08-22 13:59:37,487 ERROR   gpuapple  :52627 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 421, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 13:59:37,488 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined gpuapple monitor
+2024-08-22 13:59:37,488 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined memory monitor
+2024-08-22 13:59:37,489 DEBUG   SenderThread:52627 [sender.py:send():391] send: stats
+2024-08-22 13:59:38,155 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:39,160 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:40,165 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:40,502 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 13:59:40,608 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-22 13:59:40,608 DEBUG   SenderThread:52627 [sender.py:send_request():418] send_request: stop_status
+2024-08-22 13:59:41,168 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:42,170 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:43,176 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:44,175 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:45,178 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:45,685 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 13:59:46,183 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:47,185 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:48,190 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:49,196 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:50,201 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:50,692 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 13:59:51,202 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:52,203 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:53,207 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:54,213 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:54,768 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: resume
+2024-08-22 13:59:54,768 INFO    HandlerThread:52627 [handler.py:handle_request_resume():715] starting system metrics thread
+2024-08-22 13:59:54,768 INFO    HandlerThread:52627 [system_monitor.py:start():194] Starting system monitor
+2024-08-22 13:59:54,768 INFO    SystemMonitor:52627 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-08-22 13:59:54,768 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started cpu monitoring
+2024-08-22 13:59:54,769 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started disk monitoring
+2024-08-22 13:59:54,770 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started gpuapple monitoring
+2024-08-22 13:59:54,770 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started memory monitoring
+2024-08-22 13:59:54,772 INFO    SystemMonitor:52627 [interfaces.py:start():188] Started network monitoring
+2024-08-22 13:59:54,776 DEBUG   SenderThread:52627 [sender.py:send():391] send: telemetry
+2024-08-22 13:59:54,777 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: server_info
+2024-08-22 13:59:54,777 DEBUG   SenderThread:52627 [sender.py:send_request():418] send_request: server_info
+2024-08-22 13:59:54,862 ERROR   gpuapple  :52627 [gpu_apple.py:sample():110] GPU stats error: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+Traceback (most recent call last):
+  File "/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/sdk/internal/system/assets/gpu_apple.py", line 64, in sample
+    subprocess.check_output(command, universal_newlines=True)
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 421, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Users/minsu/.pyenv/versions/3.10.12/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/lib/python3.10/site-packages/wandb/bin/apple_gpu_stats', '--json']' died with <Signals.SIGTRAP: 5>.
+2024-08-22 13:59:54,980 DEBUG   SenderThread:52627 [sender.py:send():391] send: exit
+2024-08-22 13:59:54,980 INFO    SenderThread:52627 [sender.py:send_exit():598] handling exit code: 0
+2024-08-22 13:59:54,980 INFO    SenderThread:52627 [sender.py:send_exit():600] handling runtime: 8
+2024-08-22 13:59:54,980 INFO    SenderThread:52627 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-22 13:59:54,981 INFO    SenderThread:52627 [sender.py:send_exit():606] send defer
+2024-08-22 13:59:54,981 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: defer
+2024-08-22 13:59:54,981 INFO    HandlerThread:52627 [handler.py:handle_request_defer():184] handle defer: 0
+2024-08-22 13:59:54,981 DEBUG   SenderThread:52627 [sender.py:send_request():418] send_request: defer
+2024-08-22 13:59:54,981 INFO    SenderThread:52627 [sender.py:send_request_defer():622] handle sender defer: 0
+2024-08-22 13:59:54,981 INFO    SenderThread:52627 [sender.py:transition_state():626] send defer: 1
+2024-08-22 13:59:54,981 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: defer
+2024-08-22 13:59:54,982 INFO    HandlerThread:52627 [handler.py:handle_request_defer():184] handle defer: 1
+2024-08-22 13:59:54,982 DEBUG   SenderThread:52627 [sender.py:send_request():418] send_request: defer
+2024-08-22 13:59:54,982 INFO    SenderThread:52627 [sender.py:send_request_defer():622] handle sender defer: 1
+2024-08-22 13:59:54,982 INFO    SenderThread:52627 [sender.py:transition_state():626] send defer: 2
+2024-08-22 13:59:54,982 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: defer
+2024-08-22 13:59:54,982 INFO    HandlerThread:52627 [handler.py:handle_request_defer():184] handle defer: 2
+2024-08-22 13:59:54,982 INFO    HandlerThread:52627 [system_monitor.py:finish():203] Stopping system monitor
+2024-08-22 13:59:54,982 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-08-22 13:59:54,982 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined cpu monitor
+2024-08-22 13:59:54,982 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-08-22 13:59:54,982 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined disk monitor
+2024-08-22 13:59:54,982 DEBUG   SystemMonitor:52627 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-08-22 13:59:54,982 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined gpuapple monitor
+2024-08-22 13:59:54,983 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined memory monitor
+2024-08-22 13:59:54,983 INFO    HandlerThread:52627 [interfaces.py:finish():200] Joined network monitor
+2024-08-22 13:59:54,983 DEBUG   SenderThread:52627 [sender.py:send_request():418] send_request: defer
+2024-08-22 13:59:54,983 INFO    SenderThread:52627 [sender.py:send_request_defer():622] handle sender defer: 2
+2024-08-22 13:59:54,983 INFO    SenderThread:52627 [sender.py:transition_state():626] send defer: 3
+2024-08-22 13:59:54,983 DEBUG   SenderThread:52627 [sender.py:send():391] send: stats
+2024-08-22 13:59:54,983 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: defer
+2024-08-22 13:59:54,983 INFO    HandlerThread:52627 [handler.py:handle_request_defer():184] handle defer: 3
+2024-08-22 13:59:54,983 DEBUG   SenderThread:52627 [sender.py:send_request():418] send_request: defer
+2024-08-22 13:59:54,983 INFO    SenderThread:52627 [sender.py:send_request_defer():622] handle sender defer: 3
+2024-08-22 13:59:54,983 INFO    SenderThread:52627 [sender.py:transition_state():626] send defer: 4
+2024-08-22 13:59:54,983 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: defer
+2024-08-22 13:59:54,983 INFO    HandlerThread:52627 [handler.py:handle_request_defer():184] handle defer: 4
+2024-08-22 13:59:54,983 DEBUG   SenderThread:52627 [sender.py:send_request():418] send_request: defer
+2024-08-22 13:59:54,983 INFO    SenderThread:52627 [sender.py:send_request_defer():622] handle sender defer: 4
+2024-08-22 13:59:54,983 INFO    SenderThread:52627 [sender.py:transition_state():626] send defer: 5
+2024-08-22 13:59:54,983 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: defer
+2024-08-22 13:59:54,983 INFO    HandlerThread:52627 [handler.py:handle_request_defer():184] handle defer: 5
+2024-08-22 13:59:54,984 DEBUG   SenderThread:52627 [sender.py:send():391] send: summary
+2024-08-22 13:59:54,984 INFO    SenderThread:52627 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-22 13:59:54,984 DEBUG   SenderThread:52627 [sender.py:send_request():418] send_request: defer
+2024-08-22 13:59:54,984 INFO    SenderThread:52627 [sender.py:send_request_defer():622] handle sender defer: 5
+2024-08-22 13:59:54,984 INFO    SenderThread:52627 [sender.py:transition_state():626] send defer: 6
+2024-08-22 13:59:54,984 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: defer
+2024-08-22 13:59:54,984 INFO    HandlerThread:52627 [handler.py:handle_request_defer():184] handle defer: 6
+2024-08-22 13:59:54,984 DEBUG   SenderThread:52627 [sender.py:send_request():418] send_request: defer
+2024-08-22 13:59:54,984 INFO    SenderThread:52627 [sender.py:send_request_defer():622] handle sender defer: 6
+2024-08-22 13:59:54,986 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: status_report
+2024-08-22 13:59:55,194 INFO    SenderThread:52627 [sender.py:transition_state():626] send defer: 7
+2024-08-22 13:59:55,194 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: defer
+2024-08-22 13:59:55,195 INFO    HandlerThread:52627 [handler.py:handle_request_defer():184] handle defer: 7
+2024-08-22 13:59:55,195 DEBUG   SenderThread:52627 [sender.py:send_request():418] send_request: defer
+2024-08-22 13:59:55,195 INFO    SenderThread:52627 [sender.py:send_request_defer():622] handle sender defer: 7
+2024-08-22 13:59:55,413 INFO    Thread-12 :52627 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/minsu/Desktop/archive/DeepLearning/wandb-tutorial/wandb/run-20240822_135724-wbdp1edk/files/config.yaml
+2024-08-22 13:59:55,413 INFO    Thread-12 :52627 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/minsu/Desktop/archive/DeepLearning/wandb-tutorial/wandb/run-20240822_135724-wbdp1edk/files/wandb-summary.json
+2024-08-22 13:59:55,980 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: poll_exit
+2024-08-22 13:59:56,142 INFO    SenderThread:52627 [sender.py:transition_state():626] send defer: 8
+2024-08-22 13:59:56,143 DEBUG   SenderThread:52627 [sender.py:send_request():418] send_request: poll_exit
+2024-08-22 13:59:56,143 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: defer
+2024-08-22 13:59:56,143 INFO    HandlerThread:52627 [handler.py:handle_request_defer():184] handle defer: 8
+2024-08-22 13:59:56,143 DEBUG   SenderThread:52627 [sender.py:send_request():418] send_request: defer
+2024-08-22 13:59:56,143 INFO    SenderThread:52627 [sender.py:send_request_defer():622] handle sender defer: 8
+2024-08-22 13:59:56,143 INFO    SenderThread:52627 [job_builder.py:build():443] Attempting to build job artifact
+2024-08-22 13:59:56,144 INFO    SenderThread:52627 [job_builder.py:_get_source_type():572] is repo sourced job
+2024-08-22 13:59:56,144 INFO    SenderThread:52627 [job_builder.py:_get_program_relpath():590] run is notebook based run
+2024-08-22 13:59:56,144 WARNING SenderThread:52627 [job_builder.py:_log_if_verbose():274] Source type is set to 'repo' but some required information is missing from the environment. A job will not be created from this run. See https://docs.wandb.ai/guides/launch/create-job
+2024-08-22 13:59:56,144 INFO    SenderThread:52627 [sender.py:transition_state():626] send defer: 9
+2024-08-22 13:59:56,144 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: defer
+2024-08-22 13:59:56,144 INFO    HandlerThread:52627 [handler.py:handle_request_defer():184] handle defer: 9
+2024-08-22 13:59:56,144 DEBUG   SenderThread:52627 [sender.py:send_request():418] send_request: defer
+2024-08-22 13:59:56,144 INFO    SenderThread:52627 [sender.py:send_request_defer():622] handle sender defer: 9
+2024-08-22 13:59:56,144 INFO    SenderThread:52627 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-08-22 13:59:56,415 INFO    SenderThread:52627 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/minsu/Desktop/archive/DeepLearning/wandb-tutorial/wandb/run-20240822_135724-wbdp1edk/files/output.log
+2024-08-22 13:59:56,416 INFO    SenderThread:52627 [dir_watcher.py:finish():388] scan: /Users/minsu/Desktop/archive/DeepLearning/wandb-tutorial/wandb/run-20240822_135724-wbdp1edk/files
+2024-08-22 13:59:56,416 INFO    SenderThread:52627 [dir_watcher.py:finish():402] scan save: /Users/minsu/Desktop/archive/DeepLearning/wandb-tutorial/wandb/run-20240822_135724-wbdp1edk/files/requirements.txt requirements.txt
+2024-08-22 13:59:56,416 INFO    SenderThread:52627 [dir_watcher.py:finish():402] scan save: /Users/minsu/Desktop/archive/DeepLearning/wandb-tutorial/wandb/run-20240822_135724-wbdp1edk/files/output.log output.log
+2024-08-22 13:59:56,417 INFO    SenderThread:52627 [dir_watcher.py:finish():402] scan save: /Users/minsu/Desktop/archive/DeepLearning/wandb-tutorial/wandb/run-20240822_135724-wbdp1edk/files/config.yaml config.yaml
+2024-08-22 13:59:56,418 INFO    SenderThread:52627 [dir_watcher.py:finish():402] scan save: /Users/minsu/Desktop/archive/DeepLearning/wandb-tutorial/wandb/run-20240822_135724-wbdp1edk/files/wandb-summary.json wandb-summary.json
+2024-08-22 13:59:56,419 INFO    SenderThread:52627 [dir_watcher.py:finish():402] scan save: /Users/minsu/Desktop/archive/DeepLearning/wandb-tutorial/wandb/run-20240822_135724-wbdp1edk/files/wandb-metadata.json wandb-metadata.json
+2024-08-22 13:59:56,420 INFO    SenderThread:52627 [sender.py:transition_state():626] send defer: 10
+2024-08-22 13:59:56,422 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: defer
+2024-08-22 13:59:56,423 INFO    HandlerThread:52627 [handler.py:handle_request_defer():184] handle defer: 10
+2024-08-22 13:59:56,424 DEBUG   SenderThread:52627 [sender.py:send_request():418] send_request: defer
+2024-08-22 13:59:56,424 INFO    SenderThread:52627 [sender.py:send_request_defer():622] handle sender defer: 10
+2024-08-22 13:59:56,424 INFO    SenderThread:52627 [file_pusher.py:finish():169] shutting down file pusher
+2024-08-22 13:59:56,902 INFO    wandb-upload_0:52627 [upload_job.py:push():130] Uploaded file /Users/minsu/Desktop/archive/DeepLearning/wandb-tutorial/wandb/run-20240822_135724-wbdp1edk/files/requirements.txt
+2024-08-22 13:59:56,956 INFO    wandb-upload_1:52627 [upload_job.py:push():130] Uploaded file /Users/minsu/Desktop/archive/DeepLearning/wandb-tutorial/wandb/run-20240822_135724-wbdp1edk/files/output.log
+2024-08-22 13:59:56,986 INFO    wandb-upload_2:52627 [upload_job.py:push():130] Uploaded file /Users/minsu/Desktop/archive/DeepLearning/wandb-tutorial/wandb/run-20240822_135724-wbdp1edk/files/config.yaml
+2024-08-22 13:59:56,986 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: poll_exit
+2024-08-22 13:59:56,987 DEBUG   SenderThread:52627 [sender.py:send_request():418] send_request: poll_exit
+2024-08-22 13:59:57,029 INFO    wandb-upload_3:52627 [upload_job.py:push():130] Uploaded file /Users/minsu/Desktop/archive/DeepLearning/wandb-tutorial/wandb/run-20240822_135724-wbdp1edk/files/wandb-summary.json
+2024-08-22 13:59:57,233 INFO    Thread-11 (_thread_body):52627 [sender.py:transition_state():626] send defer: 11
+2024-08-22 13:59:57,233 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: defer
+2024-08-22 13:59:57,233 INFO    HandlerThread:52627 [handler.py:handle_request_defer():184] handle defer: 11
+2024-08-22 13:59:57,233 DEBUG   SenderThread:52627 [sender.py:send_request():418] send_request: defer
+2024-08-22 13:59:57,233 INFO    SenderThread:52627 [sender.py:send_request_defer():622] handle sender defer: 11
+2024-08-22 13:59:57,233 INFO    SenderThread:52627 [file_pusher.py:join():175] waiting for file pusher
+2024-08-22 13:59:57,233 INFO    SenderThread:52627 [sender.py:transition_state():626] send defer: 12
+2024-08-22 13:59:57,233 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: defer
+2024-08-22 13:59:57,233 INFO    HandlerThread:52627 [handler.py:handle_request_defer():184] handle defer: 12
+2024-08-22 13:59:57,233 DEBUG   SenderThread:52627 [sender.py:send_request():418] send_request: defer
+2024-08-22 13:59:57,233 INFO    SenderThread:52627 [sender.py:send_request_defer():622] handle sender defer: 12
+2024-08-22 13:59:57,234 INFO    SenderThread:52627 [file_stream.py:finish():601] file stream finish called
+2024-08-22 13:59:57,958 INFO    SenderThread:52627 [file_stream.py:finish():605] file stream finish is done
+2024-08-22 13:59:57,958 INFO    SenderThread:52627 [sender.py:transition_state():626] send defer: 13
+2024-08-22 13:59:57,958 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: defer
+2024-08-22 13:59:57,958 INFO    HandlerThread:52627 [handler.py:handle_request_defer():184] handle defer: 13
+2024-08-22 13:59:57,959 DEBUG   SenderThread:52627 [sender.py:send_request():418] send_request: defer
+2024-08-22 13:59:57,959 INFO    SenderThread:52627 [sender.py:send_request_defer():622] handle sender defer: 13
+2024-08-22 13:59:57,959 INFO    SenderThread:52627 [sender.py:transition_state():626] send defer: 14
+2024-08-22 13:59:57,959 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: defer
+2024-08-22 13:59:57,959 INFO    HandlerThread:52627 [handler.py:handle_request_defer():184] handle defer: 14
+2024-08-22 13:59:57,959 DEBUG   SenderThread:52627 [sender.py:send():391] send: final
+2024-08-22 13:59:57,959 DEBUG   SenderThread:52627 [sender.py:send():391] send: footer
+2024-08-22 13:59:57,959 DEBUG   SenderThread:52627 [sender.py:send_request():418] send_request: defer
+2024-08-22 13:59:57,959 INFO    SenderThread:52627 [sender.py:send_request_defer():622] handle sender defer: 14
+2024-08-22 13:59:57,960 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: poll_exit
+2024-08-22 13:59:57,960 DEBUG   SenderThread:52627 [sender.py:send_request():418] send_request: poll_exit
+2024-08-22 13:59:57,960 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-22 13:59:57,961 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: get_summary
+2024-08-22 13:59:57,961 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: sampled_history
+2024-08-22 13:59:57,961 DEBUG   HandlerThread:52627 [handler.py:handle_request():158] handle_request: shutdown
+2024-08-22 13:59:57,961 INFO    HandlerThread:52627 [handler.py:finish():880] shutting down handler
+2024-08-22 13:59:58,963 INFO    SenderThread:52627 [sender.py:finish():1631] shutting down sender
+2024-08-22 13:59:58,963 INFO    WriterThread:52627 [datastore.py:close():296] close: /Users/minsu/Desktop/archive/DeepLearning/wandb-tutorial/wandb/run-20240822_135724-wbdp1edk/run-wbdp1edk.wandb
+2024-08-22 13:59:58,963 INFO    SenderThread:52627 [file_pusher.py:finish():169] shutting down file pusher
+2024-08-22 13:59:58,963 INFO    SenderThread:52627 [file_pusher.py:join():175] waiting for file pusher

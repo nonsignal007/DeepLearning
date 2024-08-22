@@ -1,0 +1,48 @@
+{
+    "os": "macOS-15.0-arm64-arm-64bit",
+    "python": "3.10.12",
+    "heartbeatAt": "2024-08-22T04:57:25.472826",
+    "startedAt": "2024-08-22T04:57:24.201417",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "<python with no main file>",
+    "codePathLocal": null,
+    "git": {
+        "remote": "git@github.com:nonsignal007/DeepLearning.git",
+        "commit": "87821c1715f335434d6cce90852869a0a641a7d5"
+    },
+    "email": "nonsignal007@gmail.com",
+    "root": "/Users/minsu/Desktop/archive/DeepLearning",
+    "host": "Minsuui-MacBookAir.local",
+    "username": "minsu",
+    "executable": "/Users/minsu/.pyenv/versions/3.10.12/envs/wandb-tutorial/bin/python",
+    "cpu_count": 8,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 3504,
+        "min": 600,
+        "max": 3504
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3504,
+            "min": 600,
+            "max": 3504
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 228.27386474609375,
+            "used": 10.646476745605469
+        }
+    },
+    "gpuapple": {
+        "type": "arm",
+        "vendor": "Apple"
+    },
+    "memory": {
+        "total": 24.0
+    }
+}
